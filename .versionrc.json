@@ -1,0 +1,30 @@
+{
+  "types": [
+    {"type": "feat", "section": "✨ Features"},
+    {"type": "fix", "section": "🐛 Bug Fixes"},
+    {"type": "chore", "section": "🔧 Maintenance"},
+    {"type": "docs", "section": "📚 Documentation"},
+    {"type": "style", "section": "💄 Styling"},
+    {"type": "refactor", "section": "♻️ Code Refactoring"},
+    {"type": "perf", "section": "⚡ Performance"},
+    {"type": "test", "section": "✅ Tests"},
+    {"type": "build", "section": "📦 Build System"},
+    {"type": "ci", "section": "👷 CI/CD"},
+    {"type": "revert", "section": "⏪ Reverts"},
+    {"type": "security", "section": "🔒 Security"}
+  ],
+  "commitUrlFormat": "https://github.com/{{owner}}/{{repository}}/commit/{{hash}}",
+  "compareUrlFormat": "https://github.com/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
+  "issueUrlFormat": "https://github.com/{{owner}}/{{repository}}/issues/{{id}}",
+  "skip": {
+    "bump": false,
+    "changelog": false,
+    "commit": false,
+    "tag": false
+  },
+  "header": "# Changelog\n\nToate modificările notabile ale proiectului Transio sunt documentate automat.\n\n",
+  "releaseCommitMessageFormat": "chore(release): 🚀 v{{currentTag}}",
+  "scripts": {
+    "postchangelog": "prettier --write CHANGELOG.md"
+  }
+}

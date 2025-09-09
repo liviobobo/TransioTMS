@@ -1,0 +1,43 @@
+{
+  "name": "Transio - Sistem de Management Transport",
+  "short_name": "Transio",
+  "description": "Aplicația completă pentru gestionarea companiei de transport",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "ro",
+  "dir": "ltr",
+  "categories": [
+    "business",
+    "productivity",
+    "logistics"
+  ],
+  "icons": [
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Home",
+      "description": "Acces rapid la dashboard principal",
+      "url": "/dashboard",
+      "icons": []
+    },
+    {
+      "name": "Curse Noi",
+      "short_name": "Curse",
+      "description": "Adaugă cursă nouă rapid",
+      "url": "/curse",
+      "icons": []
+    },
+    {
+      "name": "Șoferi",
+      "short_name": "Șoferi",
+      "description": "Gestionează șoferii",
+      "url": "/soferi",
+      "icons": []
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "transio-frontend",
+  "version": "2.0.0",
+  "description": "Transio - Transport Management System Frontend",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build && node scripts/post-build.js",
+    "start": "next start -p 3001",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major",
+    "release:patch": "standard-version --release-as patch",
+    "release:dry": "standard-version --dry-run"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript": "5.5.4",
+    "tailwindcss": "3.4.6",
+    "autoprefixer": "10.4.19",
+    "postcss": "8.4.38",
+    "axios": "1.7.2",
+    "react-hook-form": "7.52.0",
+    "js-cookie": "3.0.5",
+    "react-toastify": "10.0.5",
+    "lucide-react": "0.400.0",
+    "react-datepicker": "6.9.0",
+    "date-fns": "3.6.0",
+    "next-pwa": "^5.6.0",
+    "react-dropzone": "^14.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.0",
+    "@types/react": "18.3.0",
+    "@types/react-dom": "18.3.0",
+    "@types/js-cookie": "3.0.6",
+    "@types/react-datepicker": "6.2.0",
+    "@tailwindcss/forms": "0.5.7"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

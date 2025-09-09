@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(nslookup:*)",
+      "Bash(del:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git log:*)",
+      "WebSearch",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(dir servermodels)",
+      "Bash(dir servercontrollers)",
+      "Bash(dir:*)",
+      "Bash(git rm:*)",
+      "Bash(sed:*)",
+      "Bash(npm run type-check:*)",
+      "Bash(gh issue list:*)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(gh issue view:*)",
+      "Bash(node:*)",
+      "Bash(git clean:*)",
+      "Bash(rm:*)",
+      "Bash(npm run dev:*)",
+      "Bash(taskkill:*)",
+      "Bash(npx kill-port:*)",
+      "Bash(move \"C:\\Users\\liviu\\Desktop\\Transio\\pages\\rapoarte-new.tsx\" \"C:\\Users\\liviu\\Desktop\\Transio\\pages\\rapoarte.tsx\")",
+      "Bash(curl:*)",
+      "Bash(git checkout:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
