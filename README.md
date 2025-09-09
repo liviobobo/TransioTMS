@@ -1,270 +1,270 @@
-# Transio - Transport Management System
+# Transio - Sistem de Management Transport
 
-A comprehensive open-source Transport Management System (TMS) built with modern web technologies. Designed specifically for European transport companies, with a focus on freight exchanges like Timocom.
+Un sistem complet open-source de management pentru transporturi (TMS) construit cu tehnologii web moderne. Proiectat special pentru companiile de transport europene, cu accent pe bursele de marfă precum Timocom.
 
-## 🚀 Features
+## 🚀 Funcționalități
 
-### Core Modules
-- **Dashboard**: Real-time overview with aggregated summaries and proactive alerts
-- **Transport Orders**: Complete order lifecycle management from offer to payment
-- **Drivers Management**: Personal details, documents, payments tracking, expiry alerts
-- **Vehicles Management**: Maintenance tracking, mileage monitoring, repair history
-- **Partners Management**: Companies/clients database, order history, contracts
-- **Invoicing**: Invoice generation, tracking, PDF export
-- **Reports**: Comprehensive reporting with CSV/Excel export
-- **Settings**: User management, system configuration, backup/restore
+### Module de Bază
+- **Dashboard**: Vizualizare în timp real cu rezumate agregate și alerte proactive
+- **Gestionare Curse**: Management complet al ciclului de viață al comenzilor de la ofertă la plată
+- **Management Șoferi**: Date personale, documente, urmărire plăți, alerte expirări
+- **Management Vehicule**: Urmărire întreținere, monitorizare kilometraj, istoric reparații
+- **Management Parteneri**: Bază de date companii/clienți, istoric comenzi, contracte
+- **Facturare**: Generare facturi, urmărire, export PDF
+- **Rapoarte**: Sistem complet de raportare cu export CSV/Excel
+- **Setări**: Management utilizatori, configurare sistem, backup/restore
 
-### Technical Features
-- 🔐 JWT-based authentication with role management
-- 📱 Progressive Web App (PWA) with offline support
-- 🌐 RESTful API architecture
-- 📊 Real-time data aggregation and reporting
-- 📄 PDF generation for invoices and documents
-- 🔄 Automatic backup system
-- 📈 Performance monitoring
-- 🛡️ OWASP security compliance
+### Funcționalități Tehnice
+- 🔐 Autentificare JWT cu management de roluri
+- 📱 Progressive Web App (PWA) cu suport offline
+- 🌐 Arhitectură API RESTful
+- 📊 Agregare date și raportare în timp real
+- 📄 Generare PDF pentru facturi și documente
+- 🔄 Sistem automat de backup
+- 📈 Monitorizare performanță
+- 🛡️ Conformitate securitate OWASP
 
-## 🛠️ Tech Stack
+## 🛠️ Stack Tehnologic
 
 ### Frontend
-- **Framework**: Next.js 14 with React 18
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **State Management**: React Context + Hooks
-- **Forms**: React Hook Form
-- **UI Components**: Custom components with Lucide icons
+- **Framework**: Next.js 14 cu React 18
+- **Limbaj**: TypeScript
+- **Stilizare**: Tailwind CSS
+- **Management State**: React Context + Hooks
+- **Formulare**: React Hook Form
+- **Componente UI**: Componente custom cu iconuri Lucide
 
 ### Backend
 - **Runtime**: Node.js (v20+)
 - **Framework**: Express.js
-- **Database**: MongoDB with Mongoose ODM
-- **Authentication**: JWT with bcrypt
-- **Security**: Helmet, CORS, Rate Limiting
+- **Bază de Date**: MongoDB cu Mongoose ODM
+- **Autentificare**: JWT cu bcrypt
+- **Securitate**: Helmet, CORS, Rate Limiting
 - **Logging**: Winston
-- **Validation**: Joi
+- **Validare**: Joi
 
-### Infrastructure
-- **Process Manager**: PM2
-- **Web Server**: Apache/Nginx (reverse proxy)
-- **SSL**: Let's Encrypt compatible
+### Infrastructură
+- **Manager Procese**: PM2
+- **Server Web**: Apache/Nginx (reverse proxy)
+- **SSL**: Compatibil Let's Encrypt
 
-## 📋 Prerequisites
+## 📋 Cerințe Preliminare
 
-- Node.js 20.0.0 or higher
-- MongoDB 6.0 or higher
-- npm or yarn package manager
-- PM2 (for production deployment)
+- Node.js 20.0.0 sau mai nou
+- MongoDB 6.0 sau mai nou
+- npm sau yarn package manager
+- PM2 (pentru deployment în producție)
 
-## 🚀 Quick Start
+## 🚀 Pornire Rapidă
 
-### 1. Clone the repository
+### 1. Clonează repository-ul
 ```bash
 git clone https://github.com/yourusername/transio.git
 cd transio
 ```
 
-### 2. Install dependencies
+### 2. Instalează dependențele
 ```bash
-# Install frontend dependencies
+# Instalează dependențele frontend
 npm install
 
-# Install backend dependencies
+# Instalează dependențele backend
 cd server
 npm install
 cd ..
 ```
 
-### 3. Configure environment variables
+### 3. Configurează variabilele de mediu
 
-Create `.env` files in both root and server directories:
+Creează fișiere `.env` atât în directorul rădăcină cât și în directorul server:
 
-**Root `.env`:**
+**`.env` în rădăcină:**
 ```env
 NODE_ENV=development
 PORT=3001
 NEXT_PUBLIC_API_URL=http://localhost:8001/api
 ```
 
-**Server `.env`:**
+**`.env` în server:**
 ```env
 NODE_ENV=development
 PORT=8001
 MONGODB_URI=mongodb://localhost:27017/transio
-JWT_SECRET=your-secret-jwt-key-change-this-in-production
+JWT_SECRET=schimba-aceasta-cheie-secreta-in-productie
 APP_URL=http://localhost:3001
 SMTP_HOST=smtp.example.com
 SMTP_PORT=587
-SMTP_USER=your-email@example.com
-SMTP_PASS=your-email-password
+SMTP_USER=email@example.com
+SMTP_PASS=parola-email
 ```
 
-### 4. Initialize the database
+### 4. Inițializează baza de date
 ```bash
-# Make sure MongoDB is running
+# Asigură-te că MongoDB rulează
 mongod
 
-# The application will create collections automatically on first run
+# Aplicația va crea colecțiile automat la prima rulare
 ```
 
-### 5. Run the development servers
+### 5. Pornește serverele de dezvoltare
 ```bash
-# In one terminal - Frontend
+# Într-un terminal - Frontend
 npm run dev
 
-# In another terminal - Backend
+# În alt terminal - Backend
 cd server
 npm run dev
 ```
 
-The application will be available at:
+Aplicația va fi disponibilă la:
 - Frontend: http://localhost:3001
 - Backend API: http://localhost:8001
 
-### 6. Create initial admin user
+### 6. Creează utilizatorul admin inițial
 
-Use the registration endpoint or MongoDB directly to create your first admin user.
+Folosește endpoint-ul de înregistrare sau MongoDB direct pentru a crea primul utilizator admin.
 
-## 🏗️ Project Structure
+## 🏗️ Structura Proiectului
 
 ```
 transio/
-├── components/          # React components
-│   ├── curso/          # Order-related components
-│   ├── sofer/          # Driver-related components
-│   ├── vehicul/        # Vehicle-related components
+├── components/          # Componente React
+│   ├── curso/          # Componente pentru curse
+│   ├── sofer/          # Componente pentru șoferi
+│   ├── vehicul/        # Componente pentru vehicule
 │   └── ...
-├── pages/              # Next.js pages
-│   ├── api/           # API routes (if any)
-│   ├── curse/         # Orders pages
-│   ├── soferi/        # Drivers pages
+├── pages/              # Pagini Next.js
+│   ├── api/           # Rute API (dacă există)
+│   ├── curse/         # Pagini curse
+│   ├── soferi/        # Pagini șoferi
 │   └── ...
-├── public/            # Static assets
-├── server/            # Backend application
-│   ├── models/        # MongoDB schemas
-│   ├── routes/        # Express routes
-│   ├── controllers/   # Route controllers
-│   ├── middleware/    # Custom middleware
-│   ├── utils/         # Utility functions
-│   └── app.js        # Express app entry point
-├── styles/           # Global styles
-├── utils/            # Frontend utilities
-└── hooks/            # Custom React hooks
+├── public/            # Fișiere statice
+├── server/            # Aplicație backend
+│   ├── models/        # Scheme MongoDB
+│   ├── routes/        # Rute Express
+│   ├── controllers/   # Controllere rute
+│   ├── middleware/    # Middleware personalizat
+│   ├── utils/         # Funcții utilitare
+│   └── app.js        # Punct de intrare Express
+├── styles/           # Stiluri globale
+├── utils/            # Utilitare frontend
+└── hooks/            # Hook-uri React personalizate
 ```
 
-## 🚀 Production Deployment
+## 🚀 Deployment în Producție
 
-### Using PM2
+### Folosind PM2
 
-1. Build the frontend:
+1. Construiește frontend-ul:
 ```bash
 npm run build
 ```
 
-2. Configure PM2 ecosystem file (already included):
+2. Configurează fișierul ecosystem PM2 (deja inclus):
 ```bash
-# Edit ecosystem.config.js with your paths and settings
+# Editează ecosystem.config.js cu căile și setările tale
 ```
 
-3. Start with PM2:
+3. Pornește cu PM2:
 ```bash
 pm2 start ecosystem.config.js
 ```
 
-4. Save PM2 configuration:
+4. Salvează configurația PM2:
 ```bash
 pm2 save
 pm2 startup
 ```
 
-### Using Docker (Optional)
+### Folosind Docker (Opțional)
 
-Docker support coming soon.
+Suport Docker vine în curând.
 
-## 🔧 Configuration
+## 🔧 Configurare
 
-### Database Configuration
-- MongoDB connection string in `MONGODB_URI`
-- Database name can be changed in the connection string
-- Indexes are created automatically
+### Configurare Bază de Date
+- String de conexiune MongoDB în `MONGODB_URI`
+- Numele bazei de date poate fi schimbat în string-ul de conexiune
+- Indexurile sunt create automat
 
-### Security Configuration
-- Change `JWT_SECRET` to a strong random string
-- Configure CORS origins in `server/app.js`
-- Set up rate limiting based on your needs
-- Enable HTTPS in production
+### Configurare Securitate
+- Schimbă `JWT_SECRET` cu un string random puternic
+- Configurează originile CORS în `server/app.js`
+- Setează rate limiting conform nevoilor tale
+- Activează HTTPS în producție
 
-### Email Configuration
-- Configure SMTP settings in `.env`
-- Email templates are in `server/templates/`
+### Configurare Email
+- Configurează setările SMTP în `.env`
+- Template-urile de email sunt în `server/templates/`
 
-## 📚 API Documentation
+## 📚 Documentație API
 
-### Authentication
+### Autentificare
 ```
-POST /api/auth/login     - User login
-POST /api/auth/register  - User registration
-POST /api/auth/logout    - User logout
-GET  /api/auth/me       - Get current user
-```
-
-### Resources
-All resources follow RESTful conventions:
-```
-GET    /api/[resource]      - List all
-GET    /api/[resource]/:id  - Get one
-POST   /api/[resource]      - Create new
-PUT    /api/[resource]/:id  - Update
-DELETE /api/[resource]/:id  - Delete
+POST /api/auth/login     - Login utilizator
+POST /api/auth/register  - Înregistrare utilizator
+POST /api/auth/logout    - Logout utilizator
+GET  /api/auth/me       - Obține utilizatorul curent
 ```
 
-Available resources:
-- `/api/curse` - Transport orders
-- `/api/soferi` - Drivers
-- `/api/vehicule` - Vehicles
-- `/api/parteneri` - Partners
-- `/api/facturi` - Invoices
-- `/api/rapoarte` - Reports
-- `/api/setari` - Settings
+### Resurse
+Toate resursele urmează convențiile RESTful:
+```
+GET    /api/[resursa]      - Listează toate
+GET    /api/[resursa]/:id  - Obține una
+POST   /api/[resursa]      - Creează nouă
+PUT    /api/[resursa]/:id  - Actualizează
+DELETE /api/[resursa]/:id  - Șterge
+```
 
-## 🧪 Testing
+Resurse disponibile:
+- `/api/curse` - Curse transport
+- `/api/soferi` - Șoferi
+- `/api/vehicule` - Vehicule
+- `/api/parteneri` - Parteneri
+- `/api/facturi` - Facturi
+- `/api/rapoarte` - Rapoarte
+- `/api/setari` - Setări
+
+## 🧪 Testare
 
 ```bash
-# Run frontend tests
+# Rulează testele frontend
 npm test
 
-# Run backend tests
+# Rulează testele backend
 cd server
 npm test
 ```
 
-## 🤝 Contributing
+## 🤝 Contribuții
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contribuțiile sunt binevenite! Te rugăm să trimiți un Pull Request.
 
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Fork-uiește proiectul
+2. Creează branch-ul pentru funcționalitate (`git checkout -b feature/FunctionalitateNoua`)
+3. Commit-ează schimbările (`git commit -m 'Adaugă funcționalitate nouă'`)
+4. Push pe branch (`git push origin feature/FunctionalitateNoua`)
+5. Deschide un Pull Request
 
-## 📝 License
+## 📝 Licență
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Acest proiect este licențiat sub Licența MIT - vezi fișierul [LICENSE](LICENSE) pentru detalii.
 
-## 🙏 Acknowledgments
+## 🙏 Mulțumiri
 
-- Built with Next.js and Express.js
-- UI components from Lucide React
-- Styled with Tailwind CSS
+- Construit cu Next.js și Express.js
+- Componente UI de la Lucide React
+- Stilizat cu Tailwind CSS
 
-## 📞 Support
+## 📞 Suport
 
-For support, please open an issue in the GitHub repository.
+Pentru suport, te rugăm să deschizi un issue în repository-ul GitHub.
 
-## 🔒 Security
+## 🔒 Securitate
 
-For security concerns, please contact the repository maintainers.
+Pentru probleme de securitate, te rugăm să contactezi administratorii repository-ului.
 
 ---
 
-Made with ❤️ for the transport industry
+Creat cu ❤️ pentru industria de transport
