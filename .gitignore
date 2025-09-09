@@ -74,7 +74,10 @@ scripts/backup-recovery.js
 scripts/README-Recovery.md
 
 # Claude AI assistant folder
-/.claude/
+.claude/
+
+# GitHub Actions (pentru open source - utilizatorii vor configura propriile workflow-uri)
+.github/
 
 # Git hooks (Husky nu mai e folosit - workflow simplu)
 .husky/
